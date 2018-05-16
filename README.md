@@ -69,10 +69,12 @@ users:
 
 Now you can create a new project. Once you have created the project upload the gitlab "openshift-template.json" file
 
-When creating the hostname remember to use the synatx <project>.apps.<aws ip>.xip.io
+When creating the hostname remember to use the synatx "<project>.apps.<aws ip>.xip.io"
 Installs Openshift 3.9
 
-
+#Video
+As requested, a quick video walking through the deployment:
+https://youtu.be/DOm6djdAynU
 
 
 # Resources/References
