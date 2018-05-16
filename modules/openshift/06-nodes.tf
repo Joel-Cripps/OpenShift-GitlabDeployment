@@ -27,11 +27,11 @@ resource "aws_instance" "master" {
     "${aws_security_group.openshift-public-egress.id}",
   ]
 
-  //  We need at least 30GB for OpenShift, let's be greedy...
- // root_block_device {
-  //  volume_size = 50
- //   volume_type = "gp2"
- // }
+  //We need at least 30GB for OpenShift, let's be greedy...
+  root_block_device {
+    volume_size = 50
+    volume_type = "gp2"
+  }
 
   # Storage for Docker, see:
   # https://docs.openshift.org/latest/install_config/install/host_preparation.html#configuring-docker-storage
