@@ -21,20 +21,6 @@ The code has been edited to create 1 bastion server (to ssh in and run the ansib
 
 The server can be run as a single master node, and the invetory can be edited to configure that way.
 
-# The Basics
-
-
-GitLab requires to be run as privileged
-
-```
-oc edit scc restricted
-  runAsUser:
-  type: RunAsAny
-```
-
-
-List DNS entries
-
 
 # Requirements
 AWS account with key generated
@@ -63,7 +49,19 @@ make openshift
 
 ```
 
-Once openshift is installed
+Once openshift is installed gitLab needs to be configured to allow privllaged access:
+
+```
+Change the following:
+oc edit scc restricted
+  runAsUser:
+  type: RunAsAny
+```
+Also add the gitlab user to the anyuid group:
+```
+oadm policy add-scc-to-group anyuid system:authenticated
+
+```
 
 
 Installs Openshift 3.9
