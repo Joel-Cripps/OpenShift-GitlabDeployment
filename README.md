@@ -69,7 +69,7 @@ users:
 
 Now you can create a new project. Once you have created the project upload the gitlab "openshift-template.json" file
 
-When creating the hostname remember to use the synatx "<project>.apps.<aws ip>.xip.io"
+When creating the hostname remember to use the synatx `<project>.apps.<aws ip>.xip.io`
 Installs Openshift 3.9
 
 # Video
@@ -92,4 +92,15 @@ https://docs.openshift.com/container-platform/3.5/install_config/install/advance
 
 Terraform Documentation:
 https://www.terraform.io/intro/getting-started/install.html
+
+
+#DNS Entries
+
+http://gitlab.apps.18.206.157.8.xip.io/users/sign_in
+
+https://18.206.157.8.xip.io:8443/console/
+
+master: ec2-18-206-157-8.compute-1.amazonaws.com
+
+
 
