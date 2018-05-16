@@ -59,11 +59,17 @@ oc edit scc restricted
 ```
 Also add the gitlab user to the anyuid group:
 ```
-oadm policy add-scc-to-group anyuid system:authenticated
-
+oc adm policy add-scc-to-user anyuid system:serviceaccount:<project>:gitlab-ce-user
+```
+If adding the user manually in oc edit scc anyuid it should look like:
+```
+users:
+- system:serviceaccount:gitlab:gitlab-ce-user
 ```
 
+Now you can create a new project. Once you have created the project upload the gitlab "openshift-template.json" file
 
+When creating the hostname remember to use the synatx <project>.apps.<aws ip>.xip.io
 Installs Openshift 3.9
 
 
