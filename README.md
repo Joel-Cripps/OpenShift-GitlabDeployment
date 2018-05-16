@@ -57,7 +57,15 @@ brew install git
 git clone https://github.com/Joel-Cripps/OpenShift-GitlabDeployment.git
 
 make infrastructure #Runs the terraform init,get and apply
+
+make openshift
+
+
 ```
+
+Once openshift is installed
+
+
 Installs Openshift 3.9
 
 
