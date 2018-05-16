@@ -15,7 +15,7 @@ resource "aws_route53_zone" "internal" {
 //  Routes for 'master', 'node1' and 'node2'.
 resource "aws_route53_record" "master-a-record" {
     zone_id = "${aws_route53_zone.internal.zone_id}"
-    name = "master.openshift.local"
+    name = "master-2.openshift.local"
     type = "A"
     ttl  = 300
     records = [
@@ -24,7 +24,7 @@ resource "aws_route53_record" "master-a-record" {
 }
 resource "aws_route53_record" "node1-a-record" {
     zone_id = "${aws_route53_zone.internal.zone_id}"
-    name = "node1.openshift.local"
+    name = "node1-2.openshift.local"
     type = "A"
     ttl  = 300
     records = [
